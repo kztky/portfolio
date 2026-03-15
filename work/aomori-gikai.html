@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜなに！あおもり議会 | KTAKA</title>
+  <meta name="description" content="青森市議会の431件の議事録をAIで要約・公開したシビックテックWebアプリの制作事例。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ========== Navigation ========== -->
+  <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+    <div class="nav-logo"><a href="../index.html">KTAKA</a></div>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#skill">Skill</a>
+      <a href="../index.html#info">Info</a>
+    </div>
+  </nav>
+
+  <!-- Back link -->
+  <a href="../index.html#work" class="work-back-link">← Work 一覧へ戻る</a>
+
+  <main>
+
+    <!-- ========== Hero ========== -->
+    <div class="ro-hero">
+      <img
+        src="../image/nazenani_main.png"
+        alt="なぜなに！あおもり議会 — トップビュー"
+        loading="eager"
+      >
+      <div class="ro-hero-overlay"></div>
+    </div>
+
+    <!-- ========== Overview ========== -->
+    <section class="ro-overview">
+      <div class="ro-overview-grid">
+
+        <div>
+          <p class="ro-eyebrow">アプリ制作 / 2025</p>
+          <h1 class="ro-title">なぜなに！あおもり議会</h1>
+          <p class="ro-desc">
+            青森市議会で審議された431件の議案を、AIを使ってわかりやすく要約・公開したシビックテックWebアプリ。市民が議会の決定を自分ごととして受け取れる状態を作ることを目的に、スクレイピング・AI処理・フロントエンド表示の3層で設計・実装した。
+          </p>
+        </div>
+
+        <div class="ro-meta-table">
+          <div class="ro-meta-row">
+            <span class="ro-meta-key">種別</span>
+            <span class="ro-meta-val">アプリ制作</span>
+          </div>
+          <div class="ro-meta-row">
+            <span class="ro-meta-key">技術</span>
+            <span class="ro-meta-val">Python / Claude API / HTML・CSS・JS</span>
+          </div>
+          <div class="ro-meta-row">
+            <span class="ro-meta-key">議案数</span>
+            <span class="ro-meta-val">431件</span>
+          </div>
+          <div class="ro-meta-row">
+            <span class="ro-meta-key">公開</span>
+            <span class="ro-meta-val">2025年</span>
+          </div>
+          <div class="ro-meta-row">
+            <span class="ro-meta-key">リンク</span>
+            <span class="ro-meta-val">
+              <a href="https://nazenani-aomori.vercel.app" target="_blank" rel="noopener">↗ サイトを見る</a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== Thinking ========== -->
+    <section class="ro-thinking">
+      <p class="ro-section-label">Thinking Process</p>
+
+      <div class="ro-block">
+        <p class="ro-block-label">01 — 問題 / 何が課題だったか</p>
+        <p class="ro-block-text">
+          青森市の市議会議事録は公式サイトで公開されているものの、1件あたり数万字に及ぶ長文で構成されている。一般市民が内容を把握するには相応の時間と読解力が必要で、「議会で何が決まっているか」が実質的に市民に届いていない状態だった。
+        </p>
+      </div>
+
+      <div class="ro-block">
+        <p class="ro-block-label">02 — 課題定義 / 問題をどう解釈したか</p>
+        <p class="ro-block-text">
+          「情報が公開されていない」のではなく「読める形になっていない」ことが本質だと定義した。431件ある議事録を一括処理する仕組みと、要約後の情報を市民が使えるUIで届ける両軸が必要。単なる要約ツールではなく、「市民が自分ごととして受け取れるサービス」として設計することが課題だった。
+        </p>
+      </div>
+
+      <div class="ro-block">
+        <p class="ro-block-label">03 — アプローチ / なぜその手段を選んだか</p>
+        <p class="ro-block-text">
+          PythonでスクレイピングしてClaude APIに通す処理パイプラインを構築。要約・テーマタグ分類・賛否論点整理を構造化プロンプトで一括処理した。フロントエンドはフレームワーク非使用のVanilla実装で、絞り込み・モーダル・フォントサイズ切替をピュアJSで制御。Vercel + GitHubでデプロイし、市民が実際にアクセスできる状態で公開した。
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== Visuals ========== -->
+    <section class="ro-visuals">
+      <p class="ro-section-label">Result</p>
+
+      <!-- PC: 大1枚 -->
+      <div class="ro-visuals-single">
+        <img
+          class="ro-visuals-img"
+          src="../image/nazenani_browser.png"
+          alt="なぜなに！あおもり議会 — PC全体ビュー"
+          loading="lazy"
+        >
+        <p class="ro-visuals-caption">Desktop — 全体スクロールビュー</p>
+      </div>
+
+      <!-- PC: 2枚並び -->
+      <div class="ro-visuals-grid-2">
+        <div>
+          <img
+            class="ro-visuals-img"
+            src="../image/nazenani_detail.png"
+            alt="議案詳細・絞り込みUI"
+            loading="lazy"
+          >
+          <p class="ro-visuals-caption">議案一覧 / 絞り込みUI</p>
+        </div>
+        <div>
+          <img
+            class="ro-visuals-img"
+            src="../image/nazenani_tech.png"
+            alt="技術構成セクション"
+            loading="lazy"
+          >
+          <p class="ro-visuals-caption">技術構成セクション</p>
+        </div>
+      </div>
+
+      <!-- SP: 全体スクロール1枚 + lightbox -->
+      <div class="ro-visuals-sp-wrap">
+        <img
+          class="ro-visuals-sp-img ro-lightbox-trigger"
+          src="../image/nazenani_sp.png"
+          alt="Mobile — 全体スクロール"
+          loading="lazy"
+          title="クリックで拡大"
+        >
+        <p class="ro-visuals-caption">Mobile — 全体スクロール<br>（タップで拡大）</p>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="ro-lightbox" id="nazenaniLightbox">
+        <div class="ro-lightbox-backdrop"></div>
+        <div class="ro-lightbox-inner">
+          <img src="../image/nazenani_sp.png" alt="Mobile全体スクロール 拡大">
+          <button class="ro-lightbox-close" aria-label="閉じる">✕</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== Tools ========== -->
+    <section class="ro-tools">
+      <p class="ro-section-label">Tech Stack</p>
+      <div class="ro-chip-row">
+        <span class="work-tool-chip">Python</span>
+        <span class="work-tool-chip">Claude API</span>
+        <span class="work-tool-chip">HTML</span>
+        <span class="work-tool-chip">CSS</span>
+        <span class="work-tool-chip">JavaScript</span>
+        <span class="work-tool-chip">Vercel</span>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="ro-cta">
+      <a href="https://nazenani-aomori.vercel.app" target="_blank" rel="noopener" class="work-cta-link">
+        制作物を見る ↗
+      </a>
+      <a href="../index.html#work" class="ro-back-btn">← Work 一覧へ戻る</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 KTAKA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const trigger = document.querySelector('.ro-lightbox-trigger');
+    const lightbox = document.getElementById('nazenaniLightbox');
+    const backdrop = lightbox.querySelector('.ro-lightbox-backdrop');
+    const closeBtn = lightbox.querySelector('.ro-lightbox-close');
+
+    trigger.addEventListener('click', () => lightbox.classList.add('active'));
+    backdrop.addEventListener('click', () => lightbox.classList.remove('active'));
+    closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>

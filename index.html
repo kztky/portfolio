@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KTAKA | Portfolio</title>
+  <meta name="description" content="何を作るかより、なぜ作るかから考える。Web・映像・自動化ツール制作のポートフォリオ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== Navigation ========== -->
+  <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+    <div class="nav-logo"><a href="index.html">KTAKA</a></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#skill">Skill</a>
+      <a href="#info">Info</a>
+    </div>
+  </nav>
+
+  <!-- ========== First View ========== -->
+  <div class="fv">
+    <p class="fv-eyebrow">Freelance Creator / Aomori, Japan</p>
+    <h1 class="fv-headline">"何を"より、<br>"なぜ"から。</h1>
+    <p class="fv-sub">目的のない制作はしない。だから、まず話を聞かせてください。</p>
+    <a href="mailto:kaztak251001@gmail.com" class="fv-cta">相談する</a>
+  </div>
+
+  <main>
+
+    <!-- ========== WORK ========== -->
+    <section id="work" class="section">
+      <div class="section-wrapper">
+
+        <div class="section-label" aria-hidden="true">
+          <span class="section-label-en">Work</span>
+          <span class="section-label-ja">制作物</span>
+        </div>
+
+        <div class="section-content">
+
+          <!-- Tag Filter -->
+          <div class="tag-filter" role="group" aria-label="タグでフィルター">
+            <button class="tag-btn active" data-tag="all" aria-pressed="true">All</button>
+            <button class="tag-btn" data-tag="html-css-js" aria-pressed="false">HTML・CSS・JS</button>
+            <button class="tag-btn" data-tag="python" aria-pressed="false">Python</button>
+            <button class="tag-btn" data-tag="claude-api" aria-pressed="false">Claude API</button>
+            <button class="tag-btn" data-tag="premiere-pro" aria-pressed="false">Premiere Pro</button>
+            <button class="tag-btn" data-tag="other" aria-pressed="false">他</button>
+          </div>
+
+          <!-- Category: Web制作 -->
+          <div class="work-category">
+            <div class="category-label">Web制作</div>
+            <div class="work-cards">
+
+              <article class="work-card" data-tags="html-css-js" onclick="location.href='work/ro.html'" style="cursor:pointer;">
+                <div class="card-thumbnail">
+                  <img src="image/スクリーンショット 2026-03-10 174930.png" alt="炉 RO サムネイル" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h3 class="card-title">炉 RO｜多言語レストランLP</h3>
+                    <a href="work/ro.html" class="card-ext-link" aria-label="炉 RO 詳細ページへ" onclick="event.stopPropagation()">↗</a>
+                  </div>
+                  <p class="card-challenge">5言語対応LPで、訪日外国人の予約転換率を上げる</p>
+                  <p class="card-desc">ターゲット別の導線設計から実装まで一貫対応。言語切替UIとSEO対応も含む。</p>
+                  <div class="card-tags">
+                    <button class="tag-chip" data-tag="html-css-js" onclick="event.stopPropagation()">HTML・CSS・JS</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="work-card" data-tags="html-css-js" onclick="location.href='work/ro.html'" style="cursor:pointer;">
+                <div class="card-thumbnail">
+                  <img src="image/スクリーンショット 2026-03-10 174930.png" alt="炉 RO サムネイル" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h3 class="card-title">炉 RO｜多言語レストランLP</h3>
+                    <a href="work/ro.html" class="card-ext-link" aria-label="炉 RO 詳細ページへ" onclick="event.stopPropagation()">↗</a>
+                  </div>
+                  <p class="card-challenge">5言語対応LPで、訪日外国人の予約転換率を上げる</p>
+                  <p class="card-desc">ターゲット別の導線設計から実装まで一貫対応。言語切替UIとSEO対応も含む。</p>
+                  <div class="card-tags">
+                    <button class="tag-chip" data-tag="html-css-js" onclick="event.stopPropagation()">HTML・CSS・JS</button>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /work-cards -->
+          </div>
+
+          <!-- Category: アプリ制作 -->
+          <div class="work-category">
+            <div class="category-label">アプリ制作</div>
+            <div class="work-cards">
+
+              <article class="work-card" data-tags="python claude-api" onclick="location.href='work/aomori-gikai.html'" style="cursor:pointer;">
+                <div class="card-thumbnail placeholder"></div>
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h3 class="card-title">なぜなに！あおもり議会</h3>
+                    <a href="work/aomori-gikai.html" class="card-ext-link" aria-label="なぜなに！あおもり議会 詳細ページへ" onclick="event.stopPropagation()">↗</a>
+                  </div>
+                  <p class="card-challenge">市議会議事録をAIで要約し、市民に届きやすくする</p>
+                  <p class="card-desc">431件の議事録をClaude APIで要約・整形し、Webで公開。市民の情報アクセスを改善。</p>
+                  <div class="card-tags">
+                    <button class="tag-chip" data-tag="python" onclick="event.stopPropagation()">Python</button>
+                    <button class="tag-chip" data-tag="claude-api" onclick="event.stopPropagation()">Claude API</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="work-card" data-tags="python claude-api" onclick="location.href='work/aomori-gikai.html'" style="cursor:pointer;">
+                <div class="card-thumbnail placeholder"></div>
+                <div class="card-body">
+                  <div class="card-title-row">
+                    <h3 class="card-title">なぜなに！あおもり議会</h3>
+                    <a href="work/aomori-gikai.html" class="card-ext-link" aria-label="なぜなに！あおもり議会 詳細ページへ" onclick="event.stopPropagation()">↗</a>
+                  </div>
+                  <p class="card-challenge">市議会議事録をAIで要約し、市民に届きやすくする</p>
+                  <p class="card-desc">431件の議事録をClaude APIで要約・整形し、Webで公開。市民の情報アクセスを改善。</p>
+                  <div class="card-tags">
+                    <button class="tag-chip" data-tag="python" onclick="event.stopPropagation()">Python</button>
+                    <button class="tag-chip" data-tag="claude-api" onclick="event.stopPropagation()">Claude API</button>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /work-cards -->
+          </div>
+
+        </div><!-- /section-content -->
+      </div><!-- /section-wrapper -->
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section">
+      <div class="section-wrapper">
+
+        <div class="section-label" aria-hidden="true">
+          <span class="section-label-en">About</span>
+          <span class="section-label-ja">僕について</span>
+        </div>
+
+        <div class="section-content">
+          <p class="about-name">KTAKA</p>
+          <p class="about-sub">Web・映像・自動化ツール制作のフリーランス。目的から逆算して手段を選び、課題解決に向けた制作をします。</p>
+          <a href="about.html" class="more-link">More →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SKILL ========== -->
+    <section id="skill" class="section">
+      <div class="section-wrapper">
+
+        <div class="section-label" aria-hidden="true">
+          <span class="section-label-en">Skill</span>
+          <span class="section-label-ja">できること</span>
+        </div>
+
+        <div class="section-content">
+          <div class="skill-grid">
+
+            <!-- Web制作 -->
+            <div class="skill-box">
+              <div class="skill-name">Web制作</div>
+              <div class="skill-summary">目的から逆算した設計・実装をします</div>
+              <div class="skill-cols">
+                <div>
+                  <span class="skill-col-label">Job</span>
+                  <span class="skill-col-val">要件定義・設計・実装</span>
+                </div>
+                <div>
+                  <span class="skill-col-label">Tool</span>
+                  <span class="skill-col-val">HTML / CSS / JS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 映像編集 -->
+            <div class="skill-box">
+              <div class="skill-name">映像編集</div>
+              <div class="skill-summary">企画から編集・納品まで対応します</div>
+              <div class="skill-cols">
+                <div>
+                  <span class="skill-col-label">Job</span>
+                  <span class="skill-col-val">企画・構成・編集</span>
+                </div>
+                <div>
+                  <span class="skill-col-label">Tool</span>
+                  <span class="skill-col-val">Premiere Pro / Firefly / Express / Runway</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 業務自動化 -->
+            <div class="skill-box">
+              <div class="skill-name">業務自動化</div>
+              <div class="skill-summary">繰り返し作業をコードで解決します</div>
+              <div class="skill-cols">
+                <div>
+                  <span class="skill-col-label">Job</span>
+                  <span class="skill-col-val">要件定義・設計・実装</span>
+                </div>
+                <div>
+                  <span class="skill-col-label">Tool</span>
+                  <span class="skill-col-val">Python / GAS / Claude API<br>※各種AIにも対応可能</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div><!-- /section-content -->
+      </div><!-- /section-wrapper -->
+    </section>
+
+    <!-- ========== INFO ========== -->
+    <section id="info" class="section">
+      <div class="section-wrapper">
+
+        <div class="section-label" aria-hidden="true">
+          <span class="section-label-en">Info</span>
+          <span class="section-label-ja">お問い合わせ</span>
+        </div>
+
+        <div class="section-content">
+          <ul class="info-links">
+            <li>
+              <a href="mailto:kaztak251001@gmail.com" class="info-link-row">
+                <span>Gmail</span>
+                <span class="info-link-arrow">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/kaztak260217" class="info-link-row">
+                <span>X</span>
+                <span class="info-link-arrow">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://note.com/kaztak251001" class="info-link-row">
+                <span>Note</span>
+                <span class="info-link-arrow">↗</span>
+              </a>
+            </li>
+          </ul>
+          <a href="mailto:kaztak251001@gmail.com" class="cta-btn">お問い合わせ・依頼はこちら</a>
+        </div>
+
+      </div>
+    </section>
+
+ 
