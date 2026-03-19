@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KTAKA | Portfolio</title>
+  <title>Kaztak | Portfolio</title>
   <meta name="description" content="何を作るかより、なぜ作るかから考える。Web・映像・自動化ツール制作のポートフォリオ。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="image/和紙SNSアイコン.png">
   <script src="js/script.js" defer></script>
 </head>
 <body>
 
   <!-- ========== Navigation ========== -->
   <nav class="nav" role="navigation" aria-label="メインナビゲーション">
-    <div class="nav-logo"><a href="index.html">KTAKA</a></div>
+    <div class="nav-logo"><a href="index.html">Kaztak</a></div>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -31,6 +32,13 @@
     <p class="fv-sub">目的のない制作はしない。だから、まず話を聞かせてください。</p>
     <a href="mailto:kaztak251001@gmail.com" class="fv-cta">相談する</a>
   </div>
+
+  <img
+    src="image/breakUpBirds.png"
+    alt=""
+    aria-hidden="true"
+    class="fv-bird-bg"
+  >
 
   <main>
 
@@ -62,7 +70,7 @@
 
               <article class="work-card" data-tags="html-css-js" onclick="location.href='work/ro.html'" style="cursor:pointer;">
                 <div class="card-thumbnail">
-                  <img src="image/スクリーンショット 2026-03-10 174930.png" alt="炉 RO サムネイル" loading="lazy">
+                  <img src="image/roHero.png" alt="炉 RO サムネイル" loading="lazy">
                 </div>
                 <div class="card-body">
                   <div class="card-title-row">
@@ -77,33 +85,10 @@
                 </div>
               </article>
 
-              <article class="work-card" data-tags="html-css-js" onclick="location.href='work/ro.html'" style="cursor:pointer;">
+              <article class="work-card" data-tags="python claude-api html-css-js" onclick="location.href='work/aomori-gikai.html'" style="cursor:pointer;">
                 <div class="card-thumbnail">
-                  <img src="image/スクリーンショット 2026-03-10 174930.png" alt="炉 RO サムネイル" loading="lazy">
+                  <img src="image/nazenani_main.png" alt="なぜなに！あおもり議会 サムネイル" loading="lazy">
                 </div>
-                <div class="card-body">
-                  <div class="card-title-row">
-                    <h3 class="card-title">炉 RO｜多言語レストランLP</h3>
-                    <a href="work/ro.html" class="card-ext-link" aria-label="炉 RO 詳細ページへ" onclick="event.stopPropagation()">↗</a>
-                  </div>
-                  <p class="card-challenge">5言語対応LPで、訪日外国人の予約転換率を上げる</p>
-                  <p class="card-desc">ターゲット別の導線設計から実装まで一貫対応。言語切替UIとSEO対応も含む。</p>
-                  <div class="card-tags">
-                    <button class="tag-chip" data-tag="html-css-js" onclick="event.stopPropagation()">HTML・CSS・JS</button>
-                  </div>
-                </div>
-              </article>
-
-            </div><!-- /work-cards -->
-          </div>
-
-          <!-- Category: アプリ制作 -->
-          <div class="work-category">
-            <div class="category-label">アプリ制作</div>
-            <div class="work-cards">
-
-              <article class="work-card" data-tags="python claude-api" onclick="location.href='work/aomori-gikai.html'" style="cursor:pointer;">
-                <div class="card-thumbnail placeholder"></div>
                 <div class="card-body">
                   <div class="card-title-row">
                     <h3 class="card-title">なぜなに！あおもり議会</h3>
@@ -118,15 +103,25 @@
                 </div>
               </article>
 
-              <article class="work-card" data-tags="python claude-api" onclick="location.href='work/aomori-gikai.html'" style="cursor:pointer;">
-                <div class="card-thumbnail placeholder"></div>
+            </div><!-- /work-cards -->
+          </div>
+
+          <!-- Category: 自動化ツール -->
+          <div class="work-category">
+            <div class="category-label">自動化ツール</div>
+            <div class="work-cards">
+
+              <article class="work-card" data-tags="python claude-api" onclick="location.href='work/ocr.html'" style="cursor:pointer;">
+                <div class="card-thumbnail">
+                  <img src="image/ocrtool.png" alt="OCR会計自動化ツール サムネイル" loading="lazy">
+                </div>
                 <div class="card-body">
                   <div class="card-title-row">
-                    <h3 class="card-title">なぜなに！あおもり議会</h3>
-                    <a href="work/aomori-gikai.html" class="card-ext-link" aria-label="なぜなに！あおもり議会 詳細ページへ" onclick="event.stopPropagation()">↗</a>
+                    <h3 class="card-title">OCR会計自動化ツール</h3>
+                    <a href="work/ocr.html" class="card-ext-link" aria-label="OCR会計自動化ツール 詳細ページへ" onclick="event.stopPropagation()">↗</a>
                   </div>
-                  <p class="card-challenge">市議会議事録をAIで要約し、市民に届きやすくする</p>
-                  <p class="card-desc">431件の議事録をClaude APIで要約・整形し、Webで公開。市民の情報アクセスを改善。</p>
+                  <p class="card-challenge">領収書の仕分け・入力作業をなくし、税理士事務所の工数を削減する</p>
+                  <p class="card-desc">Google Cloud Vision API + Claude APIの2段構成で仕訳を自動生成。信頼度スコア付きCSV出力まで対応。</p>
                   <div class="card-tags">
                     <button class="tag-chip" data-tag="python" onclick="event.stopPropagation()">Python</button>
                     <button class="tag-chip" data-tag="claude-api" onclick="event.stopPropagation()">Claude API</button>
@@ -151,7 +146,14 @@
         </div>
 
         <div class="section-content">
-          <p class="about-name">KTAKA</p>
+          <div class="about-name-row">
+            <img
+              src="image/和紙SNSアイコン.png"
+              alt="KTAKAアイコン"
+              class="about-icon"
+            >
+            <p class="about-name">KTAKA</p>
+          </div>
           <p class="about-sub">Web・映像・自動化ツール制作のフリーランス。目的から逆算して手段を選び、課題解決に向けた制作をします。</p>
           <a href="about.html" class="more-link">More →</a>
         </div>
@@ -236,7 +238,7 @@
         <div class="section-content">
           <ul class="info-links">
             <li>
-              <a href="mailto:kaztak251001@gmail.com" class="info-link-row">
+              <a href="/cdn-cgi/l/email-protection#cda6acb7b9aca6fff8fcfdfdfc8daaa0aca4a1e3aea2a0" class="info-link-row">
                 <span>Gmail</span>
                 <span class="info-link-arrow">↗</span>
               </a>
@@ -260,4 +262,11 @@
       </div>
     </section>
 
- 
+  </main>
+
+  <footer class="footer" style="border-top: 1px solid var(--border);">
+    <p>© 2026 Kaztak. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

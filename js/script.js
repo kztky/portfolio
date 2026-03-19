@@ -101,3 +101,32 @@
     sections.forEach(section => observer.observe(section));
   });
 })();
+
+/* ==========================================
+   FV Fade-in-up Animation
+   ========================================== */
+(function () {
+  window.addEventListener('load', () => {
+    const targets = [
+      { el: document.querySelector('.fv-eyebrow'), opacity: '0.4' },
+      { el: document.querySelector('.fv-headline'), opacity: '1' },
+      { el: document.querySelector('.fv-sub'), opacity: '0.65' },
+      { el: document.querySelector('.fv-cta'), opacity: '1' },
+    ];
+
+    targets.forEach(({ el }) => {
+      if (!el) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 1s ease, transform 1s ease';
+    });
+
+    targets.forEach(({ el, opacity }, i) => {
+      if (!el) return;
+      setTimeout(() => {
+        el.style.opacity = opacity;
+        el.style.transform = 'translateY(0)';
+      }, 300 + i * 180);
+    });
+  });
+})();
