@@ -5,12 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>生成AIを活用した問い合わせ対応業務の効率化提案 | Kaztak</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .deck-preview-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      min-height: 520px;
+      border: 1px solid var(--border);
+      background: #fff;
+      overflow: hidden;
+    }
+    .deck-preview-wrap object,
+    .deck-preview-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .deck-preview-fallback {
+      height: 100%;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      padding: 32px;
+      text-align: center;
+    }
+    .deck-preview-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .deck-note {
+      font-size: 11px;
+      opacity: 0.55;
+      margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .deck-preview-wrap,
+      .deck-preview-fallback {
+        min-height: 440px;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="nav"><div class="nav-logo"><a href="../index.html">Kaztak</a></div></nav>
   <a href="../index.html#work" class="work-back-link">← Work 一覧へ戻る</a>
   <main>
     <div class="ro-hero" style="height:auto;"><img src="../image/ai-inquiry-deck.svg" alt="生成AIを活用した問い合わせ対応業務の効率化提案"></div>
+
     <section class="ro-overview">
       <div class="ro-overview-grid">
         <div>
@@ -25,21 +71,41 @@
         </div>
       </div>
     </section>
+
+    <section class="ro-visuals">
+      <p class="ro-section-label">Deck Preview</p>
+      <div class="deck-preview-wrap">
+        <object data="../assets/ai-inquiry-proposal.pdf#view=FitH" type="application/pdf">
+          <div class="deck-preview-fallback">
+            <p class="ro-block-text">ブラウザ内でPDFを表示できません。</p>
+            <a href="../assets/ai-inquiry-proposal.pdf" class="work-cta-link" target="_blank" rel="noopener">資料を開く →</a>
+          </div>
+        </object>
+      </div>
+      <div class="deck-preview-actions">
+        <a href="../assets/ai-inquiry-proposal.pdf" class="work-cta-link" target="_blank" rel="noopener">7枚の資料を開く →</a>
+      </div>
+      <p class="deck-note">※PDFビューアの表示はブラウザ環境により異なります。表示できない場合は「7枚の資料を開く」から閲覧できます。</p>
+    </section>
+
     <section class="ro-thinking">
       <p class="ro-section-label">Thinking Process</p>
       <div class="ro-block"><p class="ro-block-label">01 — 課題</p><p class="ro-block-text">AI導入の抽象論ではなく、問い合わせ業務のどこを変えるのかを具体的に示す必要があると考えました。</p></div>
       <div class="ro-block"><p class="ro-block-label">02 — 構成</p><p class="ro-block-text">現状 → 課題 → 自動化適性 → 提案フロー → 他社事例 → 導入ロードマップの順で、意思決定しやすい流れに整理しました。</p></div>
       <div class="ro-block"><p class="ro-block-label">03 — 情報設計</p><p class="ro-block-text">調査値・予測値・他社事例を混同しないようにラベルと注記を分け、数値の意味を明確にしました。</p></div>
     </section>
+
     <section class="ro-visuals">
       <p class="ro-section-label">Deck Structure</p>
       <p class="ro-block-text">1. 表紙 / 2. AI活用の現在地 / 3. 現状課題 / 4. 自動化適性分析 / 5. AIと人間の役割分担 / 6. 他社事例 / 7. 導入ロードマップ</p>
     </section>
+
     <section class="ro-tools">
       <p class="ro-section-label">Sources</p>
       <div class="ro-chip-row"><span class="work-tool-chip">IPA DX動向2026</span><span class="work-tool-chip">Salesforce State of Service</span><span class="work-tool-chip">LINEヤフー</span><span class="work-tool-chip">ミスミグループ本社</span></div>
       <p class="ro-block-text" style="margin-top:16px;">本作品はポートフォリオ用の自主制作です。企業名・担当者名は架空であり、実在企業への提案実績ではありません。</p>
     </section>
+
     <section class="ro-cta"><a href="../index.html#work" class="ro-back-btn">← Work 一覧へ戻る</a><a href="mailto:kaztak251001@gmail.com" class="work-cta-link">資料制作について相談する →</a></section>
   </main>
   <footer class="footer"><p>© 2026 Kaztak. All rights reserved.</p></footer>
