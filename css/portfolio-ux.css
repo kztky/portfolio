@@ -222,6 +222,63 @@
   opacity: 0.42;
 }
 
+/* CTA hierarchy: viewing is secondary, contacting is primary. */
+.case-actions .work-cta-link {
+  margin-top: 0;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--text);
+  padding: 12px 16px;
+  font-size: 12px;
+}
+
+.case-actions .work-cta-link:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.case-actions .case-secondary-link {
+  background: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent);
+  padding: 13px 20px;
+}
+
+.case-actions .case-secondary-link:hover {
+  background: var(--hover);
+  border-color: var(--hover);
+  color: #fff;
+}
+
+/* TOP contact: reserve the left half for future portrait line art. */
+#info .section-wrapper {
+  min-height: 520px;
+}
+
+#info .section-content {
+  flex: 0 0 50%;
+  margin-left: auto;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+#info .info-links {
+  margin-bottom: 36px;
+}
+
+#info .info-link-row {
+  padding: 30px 0;
+  font-size: 15px;
+}
+
+#info .cta-btn {
+  padding: 18px 16px;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     gap: 10px;
@@ -274,5 +331,22 @@
 
   .case-pagination {
     padding-bottom: 30px;
+  }
+
+  #info .section-wrapper {
+    min-height: 0;
+  }
+
+  #info .section-content {
+    flex: 1 1 auto;
+    width: 100%;
+    margin-left: 0;
+    min-height: 0;
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  #info .info-link-row {
+    padding: 22px 0;
   }
 }
