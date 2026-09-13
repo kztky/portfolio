@@ -1,0 +1,278 @@
+/* Portfolio UX additions: navigation, conversion paths, confidential client work */
+
+.nav-links .nav-cta {
+  opacity: 1;
+  background: var(--accent);
+  color: var(--accent-text);
+  padding: 7px 10px;
+  border-radius: 2px;
+}
+
+.nav-links .nav-cta:hover {
+  background: var(--hover);
+  color: #fff;
+}
+
+.card-title-note {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+/* Confidential client work */
+.confidential-category {
+  margin-top: 52px;
+}
+
+.confidential-intro {
+  font-size: 13px;
+  line-height: 1.9;
+  opacity: 0.72;
+  margin-bottom: 18px;
+  max-width: 720px;
+}
+
+.confidential-list {
+  border-top: 1px solid var(--border);
+}
+
+.confidential-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.confidential-sector {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.confidential-work-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.confidential-work-scope {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.65;
+  opacity: 0.58;
+}
+
+.confidential-status {
+  font-size: 10px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  opacity: 0.65;
+}
+
+.confidential-note {
+  margin-top: 14px;
+  font-size: 11px;
+  line-height: 1.7;
+  opacity: 0.48;
+}
+
+/* Shared detail-page conversion structure */
+.case-actions {
+  padding: 24px var(--pad);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  background: rgba(255, 227, 77, 0.08);
+}
+
+.case-actions-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-bottom: 5px;
+}
+
+.case-actions-text {
+  font-size: 13px;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+.case-actions-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.case-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.case-secondary-link:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.case-inline-cta {
+  margin-top: 24px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  background: #fff;
+}
+
+.case-inline-cta p {
+  font-size: 12px;
+  line-height: 1.75;
+  opacity: 0.72;
+}
+
+.case-inline-cta a {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 1px solid currentColor;
+}
+
+.case-inline-cta a:hover {
+  color: var(--hover);
+}
+
+.case-final-cta {
+  padding: 48px var(--pad);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.case-final-kicker {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 8px;
+}
+
+.case-final-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+
+.case-final-text {
+  font-size: 12px;
+  line-height: 1.8;
+  opacity: 0.62;
+}
+
+.case-pagination {
+  padding: 22px var(--pad) 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.case-pagination a {
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.case-pagination a:hover {
+  color: var(--hover);
+}
+
+.case-next-link {
+  text-align: right;
+  max-width: 60%;
+}
+
+.case-next-link span {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.42;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  .nav-links a:nth-child(2),
+  .nav-links a:nth-child(3) {
+    display: none;
+  }
+
+  .nav-links .nav-cta {
+    display: inline-flex;
+  }
+
+  .confidential-item {
+    grid-template-columns: 72px 1fr;
+    gap: 12px;
+  }
+
+  .confidential-status {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .case-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px var(--pad);
+  }
+
+  .case-actions-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .case-inline-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .case-final-cta {
+    grid-template-columns: 1fr;
+    padding: 32px var(--pad);
+  }
+
+  .case-pagination {
+    padding-bottom: 30px;
+  }
+}

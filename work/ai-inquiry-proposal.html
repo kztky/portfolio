@@ -5,55 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>生成AIを活用した問い合わせ対応業務の効率化提案（自主制作・仮想提案） | Kaztak</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/portfolio-ux.css">
   <style>
-    .deck-preview-wrap {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      min-height: 520px;
-      border: 1px solid var(--border);
-      background: #fff;
-      overflow: hidden;
-    }
-    .deck-preview-wrap object,
-    .deck-preview-wrap iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-    .deck-preview-fallback {
-      height: 100%;
-      min-height: 520px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-      padding: 32px;
-      text-align: center;
-    }
-    .deck-preview-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
-    .deck-note {
-      font-size: 11px;
-      opacity: 0.55;
-      margin-top: 10px;
-    }
-    @media (max-width: 768px) {
-      .deck-preview-wrap,
-      .deck-preview-fallback {
-        min-height: 440px;
-      }
-    }
+    .deck-preview-wrap { width:100%; aspect-ratio:16 / 10; min-height:520px; border:1px solid var(--border); background:#fff; overflow:hidden; }
+    .deck-preview-wrap object, .deck-preview-wrap iframe { width:100%; height:100%; border:0; display:block; }
+    .deck-preview-fallback { height:100%; min-height:520px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:14px; padding:32px; text-align:center; }
+    .deck-preview-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .deck-note { font-size:11px; opacity:0.55; margin-top:10px; }
+    @media (max-width:768px) { .deck-preview-wrap, .deck-preview-fallback { min-height:440px; } }
   </style>
 </head>
 <body>
-  <nav class="nav"><div class="nav-logo"><a href="../index.html">Kaztak</a></div></nav>
+  <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+    <div class="nav-logo"><a href="../index.html">Kaztak</a></div>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#skill">Skill</a>
+      <a href="../index.html#info" class="nav-cta">Contact</a>
+    </div>
+  </nav>
+
   <a href="../index.html#work" class="work-back-link">← Work 一覧へ戻る</a>
+
   <main>
     <div class="ro-hero" style="height:auto;"><img src="../assets/works/ai-inquiry-proposal/cover.svg" alt="生成AIを活用した問い合わせ対応業務の効率化提案"></div>
 
@@ -74,6 +48,17 @@
       </div>
     </section>
 
+    <section class="case-actions" aria-label="作品アクション">
+      <div>
+        <p class="case-actions-label">View / Contact</p>
+        <p class="case-actions-text">7枚の資料を確認するか、提案資料・営業資料の制作について相談できます。</p>
+      </div>
+      <div class="case-actions-buttons">
+        <a href="../assets/works/ai-inquiry-proposal/deck.pdf" class="work-cta-link" target="_blank" rel="noopener">7枚の資料を見る ↗</a>
+        <a href="mailto:kaztak251001@gmail.com" class="case-secondary-link">資料制作を相談する →</a>
+      </div>
+    </section>
+
     <section class="ro-visuals">
       <p class="ro-section-label">Deck Preview</p>
       <div class="deck-preview-wrap">
@@ -86,6 +71,7 @@
       </div>
       <div class="deck-preview-actions">
         <a href="../assets/works/ai-inquiry-proposal/deck.pdf" class="work-cta-link" target="_blank" rel="noopener">7枚の資料を開く →</a>
+        <a href="mailto:kaztak251001@gmail.com" class="case-secondary-link">資料制作について相談する →</a>
       </div>
       <p class="deck-note">※PDFビューアの表示はブラウザ環境により異なります。表示できない場合は「7枚の資料を開く」から閲覧できます。</p>
     </section>
@@ -100,6 +86,10 @@
     <section class="ro-visuals">
       <p class="ro-section-label">Deck Structure</p>
       <p class="ro-block-text">1. 表紙 / 2. AI活用の現在地 / 3. 現状課題 / 4. 自動化適性分析 / 5. AIと人間の役割分担 / 6. 他社事例 / 7. 導入ロードマップ</p>
+      <div class="case-inline-cta">
+        <p>経営・営業・社内提案など、読み手が意思決定しやすい資料構成に整理します。</p>
+        <a href="mailto:kaztak251001@gmail.com">資料制作について相談する →</a>
+      </div>
     </section>
 
     <section class="ro-tools">
@@ -108,8 +98,21 @@
       <p class="ro-block-text" style="margin-top:16px;">本作品はポートフォリオ用の自主制作です。企業名・担当者名は架空であり、実在企業への提案実績ではありません。</p>
     </section>
 
-    <section class="ro-cta"><a href="../index.html#work" class="ro-back-btn">← Work 一覧へ戻る</a><a href="mailto:kaztak251001@gmail.com" class="work-cta-link">資料制作について相談する →</a></section>
+    <section class="case-final-cta">
+      <div>
+        <p class="case-final-kicker">Contact</p>
+        <h2 class="case-final-title">伝える情報を、意思決定できる資料に整えます。</h2>
+        <p class="case-final-text">構成整理、情報設計、図解、スライド制作まで一貫して対応します。</p>
+      </div>
+      <a href="mailto:kaztak251001@gmail.com" class="work-cta-link">相談する →</a>
+    </section>
+
+    <nav class="case-pagination" aria-label="作品間ナビゲーション">
+      <a href="../index.html#work">← Work 一覧</a>
+      <a href="ocr.html" class="case-next-link"><span>Next Work</span>OCR会計自動化ツール →</a>
+    </nav>
   </main>
+
   <footer class="footer"><p>© 2026 Kaztak. All rights reserved.</p></footer>
 </body>
 </html>
