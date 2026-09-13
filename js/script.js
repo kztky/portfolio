@@ -103,6 +103,23 @@
 })();
 
 /* ==========================================
+   Portfolio Card Title Formatting
+   ========================================== */
+(function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    const title = Array.from(document.querySelectorAll('.card-title'))
+      .find(el => el.textContent.includes('生成AIを活用した問い合わせ対応業務の効率化提案'));
+
+    if (!title) return;
+
+    title.innerHTML = title.textContent.replace(
+      '（自主制作・仮想提案）',
+      '<br>（自主制作・仮想提案）'
+    );
+  });
+})();
+
+/* ==========================================
    FV Fade-in-up Animation
    ========================================== */
 (function () {
