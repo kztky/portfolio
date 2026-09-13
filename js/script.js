@@ -9,13 +9,11 @@
   if (!filterBtns.length) return;
 
   function applyFilter(tag) {
-    // Update button states
     filterBtns.forEach(btn => {
       btn.classList.toggle('active', btn.dataset.tag === tag);
       btn.setAttribute('aria-pressed', btn.dataset.tag === tag ? 'true' : 'false');
     });
 
-    // Show/hide cards
     workCards.forEach(card => {
       if (tag === 'all') {
         card.classList.remove('hidden');
@@ -25,23 +23,23 @@
       }
     });
 
-    // Hide/show empty categories
     categories.forEach(cat => {
+      if (cat.classList.contains('confidential-category')) {
+        cat.style.display = tag === 'all' ? '' : 'none';
+        return;
+      }
       const visible = cat.querySelectorAll('.work-card:not(.hidden)');
       cat.style.display = visible.length === 0 ? 'none' : '';
     });
   }
 
-  // Filter button clicks
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => applyFilter(btn.dataset.tag));
   });
 
-  // Tag chip clicks inside cards
   document.querySelectorAll('.tag-chip[data-tag]').forEach(chip => {
     chip.addEventListener('click', () => {
       applyFilter(chip.dataset.tag);
-      // Scroll tag filter into view
       const filterEl = document.querySelector('.tag-filter');
       if (filterEl) {
         filterEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -49,7 +47,6 @@
     });
   });
 
-  // Initialize
   applyFilter('all');
 })();
 
@@ -99,23 +96,6 @@
     }, { threshold: 0.3 });
 
     sections.forEach(section => observer.observe(section));
-  });
-})();
-
-/* ==========================================
-   Portfolio Card Title Formatting
-   ========================================== */
-(function () {
-  document.addEventListener('DOMContentLoaded', () => {
-    const title = Array.from(document.querySelectorAll('.card-title'))
-      .find(el => el.textContent.includes('生成AIを活用した問い合わせ対応業務の効率化提案'));
-
-    if (!title) return;
-
-    title.innerHTML = title.textContent.replace(
-      '（自主制作・仮想提案）',
-      '<br>（自主制作・仮想提案）'
-    );
   });
 })();
 
